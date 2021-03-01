@@ -3,6 +3,7 @@ package amazon;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,7 +16,15 @@ public class HomePage  {
     String productName ="Mask";
     String searchBoxWebLocator = "twotabsearchtextbox";
     String searchButtonLocator = "nav-search-submit-button";
+    String singInButtonLocator = "nav-link-accountList";
+    String emailIdLocator ="ap_email";
+    String passwordIdLocator ="ap_password";
+    String userPassword = "Sage2010";
+    String emailLogin = "easha2272@gmail.com";
+    String continueButton="a-button-input";
+    String signInButton ="auth-signin-button";
     WebDriver driver;
+
 
 
     @BeforeMethod
@@ -35,8 +44,21 @@ public class HomePage  {
         //click on searchButton
         driver.findElement(By.id(searchButtonLocator)).click();
     }
+
+    public void checkSignInButton(){
+        driver.findElement(By.id(singInButtonLocator)).click();
+        driver.findElement(By.id(emailIdLocator)).sendKeys(emailLogin);
+        driver.findElement(By.className(continueButton)).click();
+        driver.findElement(By.id(passwordIdLocator)).sendKeys(userPassword);
+        driver.findElement(By.id(signInButton)).click();
+
+
+
+
+    }
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(7000);
         driver.quit();
     }
 }
