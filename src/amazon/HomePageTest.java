@@ -25,4 +25,5 @@ public class HomePageTest extends HomePage{
         String actualText = driver.findElement(By.className("a-spacing-small")).getText();
         Assert.assertEquals(actualText, expectedText, "Did not match");
     }
+
 }
