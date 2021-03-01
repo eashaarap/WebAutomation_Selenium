@@ -18,18 +18,6 @@ public class HomePageTest extends HomePage{
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText,expectedText, "Page Title not Matched");
     }
-    @Test
-    public void checkSignInTest(){
-        checkSignInButton();
-        String expectedText= "Your recent order";
-        String actualText = driver.findElement(By.className("a-spacing-small")).getText();
-        Assert.assertEquals(actualText, expectedText, "Did not match");
-    }
-    @Test
-    public void checkDeliverLocationTest(){
-        checkDeliverLocation();
 
-
-    }
 
 }

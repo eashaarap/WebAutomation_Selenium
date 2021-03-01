@@ -17,13 +17,6 @@ public class HomePage  {
     String productName ="Mask";
     String searchBoxWebLocator = "twotabsearchtextbox";
     String searchButtonLocator = "nav-search-submit-button";
-    String singInButtonLocator = "nav-link-accountList";
-    String emailIdLocator ="ap_email";
-    String passwordIdLocator ="ap_password";
-    String userPassword = "Sage2010";
-    String emailLogin = "easha2272@gmail.com";
-    String continueButton="a-button-input";
-    String signInButton ="auth-signin-button";
     WebDriver driver;
 
 
@@ -46,20 +39,7 @@ public class HomePage  {
         driver.findElement(By.id(searchButtonLocator)).click();
     }
 
-    public void checkSignInButton(){
-        driver.findElement(By.id(singInButtonLocator)).click();
-        driver.findElement(By.id(emailIdLocator)).sendKeys(emailLogin);
-        driver.findElement(By.className(continueButton)).click();
-        driver.findElement(By.id(passwordIdLocator)).sendKeys(userPassword);
-        driver.findElement(By.id(signInButton)).click();
 
-    }
-
-    @Test
-    public void checkDeliverLocation(){
-        checkSignInButton();
-        driver.findElement(By.className("nav-line-2")).click();
-    }
     @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(30000);
