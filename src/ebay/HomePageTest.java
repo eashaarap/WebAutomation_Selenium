@@ -23,6 +23,14 @@ public class HomePageTest extends HomePage{
         Assert.assertEquals(actualText, expectedText, "Sign in page does not match");
 
     }
+    @Test
+    //Test Case #4
+    public void checkRegisterButtonTest(){
+        checkRegisterButton();
+        String expectedText ="giant-text-2 txt-center title";
+        String actualText = driver.findElement(By.className("giant-text-2 txt-center title")).getText();
+        Assert.assertEquals(actualText, expectedText, "Registration Button Doesnt Match");
+    }
 
 
 }

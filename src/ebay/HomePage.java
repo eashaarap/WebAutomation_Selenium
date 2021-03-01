@@ -16,6 +16,7 @@ public class HomePage {
     String signInButtonLocator = "gh-ug";
     String userNameLocator = "floating-label__label floating-label__label--animate floating-label__label--inline";
     String continueButtonLocator ="signin-continue-btn";
+    String firstName = "firstname";
     @BeforeMethod
     public void setUp(){
             String chromeDriverPath = "BrowserDriver/windows/chromedriver.exe";
@@ -37,8 +38,19 @@ public class HomePage {
 //        driver.findElement(By.id(signInButtonLocator)).click();
     }
 
+
+    public void checkRegisterButton(){
+        driver.findElement(By.xpath("//*[@id=\"gh-ug-flex\"]/a")).click();
+        driver.findElement(By.id(firstName)).sendKeys("Easha");
+        driver.findElement(By.id("lastname")).sendKeys("Khanam");
+        driver.findElement(By.id("Email")).sendKeys("easha2202@test.com");
+        driver.findElement(By.id("password")).sendKeys("Test#123!455");
+        driver.findElement(By.id("EMAIL_REG_FORM_SUBMIT")).click();
+    }
+
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(30000);
         driver.quit();
     }
 
