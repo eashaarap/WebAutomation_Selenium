@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 public class HomePageTest extends HomePage{
 
     @Test
+    //test case #2
     public void checkSearchBoxTest(){
         checkSearchBox();
         String expectedText="toilet paper";
