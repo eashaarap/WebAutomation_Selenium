@@ -1,0 +1,25 @@
+iFrame means frame inside a frame(site inside a site)
+
+Button do some kind of action and is clickable
+
+Inspect Button click 1 time
+
+SearchBox
+Locators: 8 types( as automation engineer look for theses elements from DOM in this order first to automate)
+-always look for locator that is unique ( 1 of 1)
+    - id
+    -Name
+    -Class
+    -Tag
+    -css- 1 second faster than xpath : custom css selector
+        write click on the tag, click 'copy', then click Copy Selector
+    -xpath- slowest approach: custom xpath
+   Link Test:
+    -Link Text
+    -PartialLink text
+
+ *************************
+ Attribute
+ <input id = "idNameWhateverYouWant">
+ ************************
+ Custom CSS Selector and XPath
