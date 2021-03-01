@@ -3,6 +3,7 @@ package ebay;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -12,7 +13,9 @@ public class HomePage {
     String searchBoxLocator = "gh-ac";
     String productName = "toilet paper";
     String searchButtonLocator = "gh-btn";
-
+    String signInButtonLocator = "gh-ug";
+    String userNameLocator = "floating-label__label floating-label__label--animate floating-label__label--inline";
+    String continueButtonLocator ="signin-continue-btn";
     @BeforeMethod
     public void setUp(){
             String chromeDriverPath = "BrowserDriver/windows/chromedriver.exe";
@@ -26,6 +29,17 @@ public class HomePage {
     public void checkSearchBox(){
         driver.findElement(By.id(searchBoxLocator)).sendKeys(productName);
         driver.findElement(By.id(searchButtonLocator)).click();
+    }
+
+    public void checksignInButton(){
+        driver.findElement(By.id(signInButtonLocator)).click();
+//        driver.findElement(By.className(userNameLocator)).sendKeys();
+//        driver.findElement(By.id(signInButtonLocator)).click();
+    }
+
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
     }
 
 }
