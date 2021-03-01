@@ -1,6 +1,7 @@
 package amazon;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -52,13 +53,16 @@ public class HomePage  {
         driver.findElement(By.id(passwordIdLocator)).sendKeys(userPassword);
         driver.findElement(By.id(signInButton)).click();
 
+    }
 
-
-
+    @Test
+    public void checkDeliverLocation(){
+        checkSignInButton();
+        driver.findElement(By.className("nav-line-2")).click();
     }
     @AfterMethod
     public void tearDown() throws InterruptedException {
-        Thread.sleep(7000);
+        Thread.sleep(30000);
         driver.quit();
     }
 }

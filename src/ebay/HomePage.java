@@ -1,8 +1,10 @@
 package ebay;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -19,9 +21,9 @@ public class HomePage {
     String firstName = "firstname";
     @BeforeMethod
     public void setUp(){
-            String chromeDriverPath = "BrowserDriver/windows/chromedriver.exe";
-            System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-            driver = new ChromeDriver();
+            String fireFoxDriverPath = "BrowserDriver/windows/geckodriver.exe";
+            System.setProperty("webdriver.gecko.driver", fireFoxDriverPath);
+            driver = new FirefoxDriver();
             driver.manage().window().maximize();
             driver.manage().deleteAllCookies();
             driver.get(ebayUrl);
@@ -44,8 +46,10 @@ public class HomePage {
         driver.findElement(By.id(firstName)).sendKeys("Easha");
         driver.findElement(By.id("lastname")).sendKeys("Khanam");
         driver.findElement(By.id("Email")).sendKeys("easha2202@test.com");
-        driver.findElement(By.id("password")).sendKeys("Test#123!455");
-        driver.findElement(By.id("EMAIL_REG_FORM_SUBMIT")).click();
+        driver.findElement(By.id("password")).sendKeys("Password#2021");
+//        driver.findElement(By.id("password")).sendKeys(Keys.ENTER);
+//        driver.findElement(By.id("EMAIL_REG_FORM_SUBMIT")).click();
+//        driver.findElement(By.id("showpassword")).click();
     }
 
     @AfterMethod
