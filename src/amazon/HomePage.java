@@ -40,9 +40,23 @@ public class HomePage  {
     }
 
 
+    public void checkBooksButton(){
+        driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[6]")).click();
+        driver.findElement(By.id(searchBoxWebLocator)).sendKeys("A thousand splendid suns");
+        driver.findElement(By.id(searchButtonLocator)).click();
+    }
+
+    public void checkBestSellersButton(){
+        driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[1]")).click();
+        driver.findElement(By.xpath("//*[@id=\"zg_browseRoot\"]/ul/li[8]/a")).click();
+    }
+
+
+
+
     @AfterMethod
     public void tearDown() throws InterruptedException {
-//        Thread.sleep(30000);
+        Thread.sleep(6000);
         driver.quit();
     }
 }

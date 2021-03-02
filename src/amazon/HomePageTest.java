@@ -18,6 +18,20 @@ public class HomePageTest extends HomePage{
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText,expectedText, "Page Title not Matched");
     }
+    @Test
+    public void checkBestSellersButtonTest(){
+        checkBestSellersButton();
+        String expectedText = "Best Sellers in Baby";
+        String actualText = driver.findElement(By.xpath("//*[@id=\"zg-right-col\"]/h1")).getText();
+        Assert.assertEquals(actualText, expectedText, "Page title does not match");
+    }
+    @Test
+    public void checkBooksButtonTest(){
+        checkBooksButton();
+        String expectedText = "Amazon.com: Books";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page title does not match");
+    }
 
 
 }
