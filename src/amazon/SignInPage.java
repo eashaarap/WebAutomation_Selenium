@@ -1,6 +1,13 @@
 package amazon;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 public class SignInPage extends HomePage{
     String singInButtonLocator = "nav-link-accountList";
@@ -11,7 +18,18 @@ public class SignInPage extends HomePage{
     String continueButton="a-button-input";
     String signInButton ="auth-signin-button";
 
+    public void loadProperties() throws IOException {
+        String filePath = "../ExternalLibrary/properties/secret.properties";
+        Properties prop = new Properties();
+        InputStream inputStream = new FileInputStream(filePath);
+        prop.load(inputStream);
+       String password = prop.getProperty("password");
+        String email = prop.getProperty("email");
+    }
+
+
     public void checkSignInButton(){
+
         driver.findElement(By.id(singInButtonLocator)).click();
         driver.findElement(By.id(emailIdLocator)).sendKeys(emailLogin);
         driver.findElement(By.className(continueButton)).click();
@@ -20,10 +38,17 @@ public class SignInPage extends HomePage{
 
     }
 
+    public void checkOrdersButton(){
+    checkSignInButton();
+    driver.findElement(By.xpath("//*[@id=\"nav-orders\"]/span[1]")).click();
+    }
+
     public void checkDeliverLocation(){
         checkSignInButton();
         driver.findElement(By.className("nav-line-2")).click();
     }
+
+
 
 }
 

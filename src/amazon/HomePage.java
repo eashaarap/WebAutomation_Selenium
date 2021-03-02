@@ -42,7 +42,7 @@ public class HomePage  {
 
     @AfterMethod
     public void tearDown() throws InterruptedException {
-        Thread.sleep(30000);
+//        Thread.sleep(30000);
         driver.quit();
     }
 }

@@ -1,2 +1,4 @@
-package walmart;public class HomePage {
+package walmart;
+
+public class HomePage {
 }
