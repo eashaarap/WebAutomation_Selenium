@@ -19,6 +19,7 @@ public class HomePageTest extends HomePage{
         Assert.assertEquals(actualText,expectedText, "Page Title not Matched");
     }
     @Test
+    //Test Case 8
     public void checkBestSellersButtonTest(){
         checkBestSellersButton();
         String expectedText = "Best Sellers in Baby";
