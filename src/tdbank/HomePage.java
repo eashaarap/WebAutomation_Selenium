@@ -26,8 +26,13 @@ public class HomePage {
     public void checkCommercialOption(){
         driver.findElement(By.linkText("Commercial")).click();
     }
-       public void checkInvestingWealthOption(){
+    public void checkInvestingWealthOption(){
            driver.findElement(By.linkText("Investing & Wealth")).click();
-       }
+    }
+     @Test
+    public void checkIndividualFamiliesButton(){
+        checkInvestingWealthOption();
+        driver.findElement(By.xpath("//*[@id=\"drag-id-tabsCarousel0\"]/div/li[1]/div[1]/span/span")).click();
+    }
 
 }

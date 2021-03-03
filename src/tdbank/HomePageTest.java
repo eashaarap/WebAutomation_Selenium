@@ -28,4 +28,12 @@ public class HomePageTest extends HomePage  {
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page does not match");
     }
+    //Test Case 13
+    @Test
+    public void checkIndividualFamiliesButtonTest(){
+        checkIndividualFamiliesButton();
+        String expectedText = "Individual & Family Private Wealth & Investment Management | TD Wealth";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+    }
 }
