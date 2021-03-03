@@ -57,6 +57,9 @@ public class HomePage {
     public void checkMusicButton() {
         driver.findElement(By.linkText("Music")).click();
     }
+    public void checkDealsButton() {
+        driver.findElement(By.linkText("Deals")).click();
+    }
 
     public void checkSearchBox(){
         driver.findElement(By.id(searchBoxLocator)).sendKeys(productName);

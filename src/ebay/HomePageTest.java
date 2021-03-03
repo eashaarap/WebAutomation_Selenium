@@ -106,6 +106,14 @@ public class HomePageTest extends HomePage{
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page does not match");
     }
+    @Test
+    //Test Case 23
+    public void checkDealsButton(){
+        checkDealsButton();
+        String expectedText="Daily Deals on eBay | Best deals and Free Shipping";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+    }
 
 
 
