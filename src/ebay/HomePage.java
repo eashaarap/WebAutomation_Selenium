@@ -29,6 +29,20 @@ public class HomePage {
             driver.get(ebayUrl);
     }
 
+
+    public void checkMotorsButton() {
+        driver.findElement(By.linkText("Motors")).click();
+    }
+//    public void checkMotorsButton() {
+//        driver.findElement(By.linkText("Motors")).click();
+//    }
+//    public void checkMotorsButton() {
+//        driver.findElement(By.linkText("Motors")).click();
+//    }
+//    public void checkMotorsButton() {
+//        driver.findElement(By.linkText("Motors")).click();
+//    }
+
     public void checkSearchBox(){
         driver.findElement(By.id(searchBoxLocator)).sendKeys(productName);
         driver.findElement(By.id(searchButtonLocator)).click();
@@ -52,7 +66,7 @@ public class HomePage {
 //        driver.findElement(By.id("showpassword")).click();
     }
 
-    @AfterMethod
+
     public void tearDown() throws InterruptedException {
         Thread.sleep(30000);
         driver.quit();

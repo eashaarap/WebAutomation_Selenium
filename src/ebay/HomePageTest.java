@@ -32,5 +32,16 @@ public class HomePageTest extends HomePage{
         Assert.assertEquals(actualText, expectedText, "Registration Button Doesnt Match");
     }
 
+    @Test
+    //Test Case 15
+    public void checkMotorsButtonTest(){
+        checkMotorsButton();
+        String expectedText="eBay Motors: Auto Parts and Vehicles | eBay";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+
+    }
+
+
 
 }

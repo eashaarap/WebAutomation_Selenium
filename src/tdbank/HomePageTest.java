@@ -23,7 +23,7 @@ public class HomePageTest extends HomePage  {
     }
     //Test Case 11
     public void checkInvestingWealthOption(){
-        checkCommercialOption();
+        checkInvestingWealthOption();
         String expectedText = "Wealth & Investment Management And Financial Planning | TD Wealth";
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page does not match");

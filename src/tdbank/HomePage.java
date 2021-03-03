@@ -23,6 +23,7 @@ public class HomePage {
     public void checkSmallBusinessOption(){
         driver.findElement(By.linkText("Small Business")).click();
     }
+
     public void checkCommercialOption(){
         driver.findElement(By.linkText("Commercial")).click();
     }
