@@ -47,7 +47,7 @@ public class SignInPage extends HomePage{
         driver.findElement(By.className("nav-line-2")).click();
     }
 
-
+    @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(3000);
         driver.quit();

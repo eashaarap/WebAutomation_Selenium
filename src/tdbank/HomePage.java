@@ -1,2 +1,27 @@
-package tdbank;public class HomePage {
+package tdbank;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class HomePage {
+    String tdbankUrl= "https:www.tdbank.com/";
+    WebDriver driver;
+    @BeforeMethod
+    public void setUp(){
+        String chromeDriverPath = "BrowserDriver/windows/chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.get(tdbankUrl);
+    }
+
+
+    public void checkSmallBusinessOption(){
+        driver.findElement(By.linkText("Small Business")).click();
+    }
+
 }
