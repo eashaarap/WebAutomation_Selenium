@@ -41,6 +41,9 @@ public class HomePage  {
     public void checkTodaysDealButton(){
         driver.findElement(By.linkText("Today's Deals")).click();
     }
+    public void checkPrimeButton(){
+        driver.findElement(By.linkText("Prime")).click();
+    }
 
 
     public void checkBooksButton(){
