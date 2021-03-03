@@ -48,6 +48,9 @@ public class HomePage {
     public void checkSportingGoodsButton() {
         driver.findElement(By.linkText("Sporting Goods")).click();
     }
+    public void checkToysButton() {
+        driver.findElement(By.linkText("Toys")).click();
+    }
 
     public void checkSearchBox(){
         driver.findElement(By.id(searchBoxLocator)).sendKeys(productName);
