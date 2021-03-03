@@ -66,6 +66,15 @@ public class HomePageTest extends HomePage{
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page title does not match");
     }
+    @Test
+    //Test Case 30
+    public void checkKindleBooksButtonTest(){
+        checkKindleBooksButton();
+        String expectedText = "Amazon.com: Kindle eBooks: Kindle Store: Nonfiction, Literature & Fiction, Foreign Languages, Business & Money & More";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page title does not match");
+    }
+
 
 
 

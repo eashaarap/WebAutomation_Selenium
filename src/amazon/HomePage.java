@@ -50,7 +50,9 @@ public class HomePage  {
     public void checkFashionButton(){
         driver.findElement(By.linkText("Fashion")).click();
     }
-
+    public void checkKindleBooksButton(){
+        driver.findElement(By.linkText("Kindle Books")).click();
+    }
 
     public void checkBooksButton(){
         driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[6]")).click();
@@ -64,9 +66,7 @@ public class HomePage  {
     }
 
 
-
-
-
+    @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(6000);
         driver.quit();
