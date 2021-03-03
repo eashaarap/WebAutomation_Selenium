@@ -23,5 +23,11 @@ public class HomePage {
     public void checkSmallBusinessOption(){
         driver.findElement(By.linkText("Small Business")).click();
     }
+    public void checkCommercialOption(){
+        driver.findElement(By.linkText("Commercial")).click();
+    }
+       public void checkInvestingWealthOption(){
+           driver.findElement(By.linkText("Investing & Wealth")).click();
+       }
 
 }

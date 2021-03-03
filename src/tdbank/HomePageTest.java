@@ -13,4 +13,17 @@ public class HomePageTest extends HomePage  {
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page does not match");
     }
+    @Test
+    public void checkCommercialOptionTest(){
+        checkCommercialOption();
+        String expectedText = "TD Commercial Business Banking";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+    }
+    public void checkInvestingWealthOption(){
+        checkCommercialOption();
+        String expectedText = "Wealth & Investment Management And Financial Planning | TD Wealth";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+    }
 }
