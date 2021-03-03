@@ -38,6 +38,9 @@ public class HomePage  {
         //click on searchButton
         driver.findElement(By.id(searchButtonLocator)).click();
     }
+    public void checkTodaysDealButton(){
+        driver.findElement(By.linkText("Today's Deals")).click();
+    }
 
 
     public void checkBooksButton(){
@@ -54,7 +57,7 @@ public class HomePage  {
 
 
 
-    @AfterMethod
+
     public void tearDown() throws InterruptedException {
         Thread.sleep(6000);
         driver.quit();
