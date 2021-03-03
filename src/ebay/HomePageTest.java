@@ -42,7 +42,7 @@ public class HomePageTest extends HomePage{
 
     }
     @Test
-    //Test Case 16
+    //Test Case 17
     public void checkFashionButtonTest(){
         checkFashionButton();
         String expectedText="Fashion products for sale | eBay";
@@ -51,13 +51,20 @@ public class HomePageTest extends HomePage{
 
     }
     @Test
-    //Test Case 17
+    //Test Case 16
     public void checkElectronicsButtonTest(){
         checkElectronicsButton();
         String expectedText="Electronics products for sale | eBay";
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page does not match");
-
+    }
+    @Test
+    //Test Case 17
+    public void checkCollectiblesArtButtonest(){
+        checkCollectiblesArtButton();
+        String expectedText="Collectibles & Art products for sale | eBay";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
     }
 
 

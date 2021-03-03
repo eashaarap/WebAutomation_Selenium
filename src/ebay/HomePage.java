@@ -39,9 +39,9 @@ public class HomePage {
     public void checkElectronicsButton() {
         driver.findElement(By.linkText("Electronics")).click();
     }
-//    public void checkMotorsButton() {
-//        driver.findElement(By.linkText("Motors")).click();
-//    }
+    public void checkCollectiblesArtButton() {
+        driver.findElement(By.linkText("Collectibles & Art")).click();
+    }
 
     public void checkSearchBox(){
         driver.findElement(By.id(searchBoxLocator)).sendKeys(productName);
