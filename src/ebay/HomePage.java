@@ -42,6 +42,9 @@ public class HomePage {
     public void checkCollectiblesArtButton() {
         driver.findElement(By.linkText("Collectibles & Art")).click();
     }
+    public void checkHomeGardenButton() {
+        driver.findElement(By.linkText("Home & Garden")).click();
+    }
 
     public void checkSearchBox(){
         driver.findElement(By.id(searchBoxLocator)).sendKeys(productName);

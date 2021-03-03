@@ -60,9 +60,17 @@ public class HomePageTest extends HomePage{
     }
     @Test
     //Test Case 17
-    public void checkCollectiblesArtButtonest(){
+    public void checkCollectiblesArtButtonTest(){
         checkCollectiblesArtButton();
         String expectedText="Collectibles & Art products for sale | eBay";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+    }
+    @Test
+    //Test Case 18
+    public void checkHomeGardenButtonTest(){
+        checkHomeGardenButton();
+        String expectedText="Home & Garden products for sale | eBay";
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page does not match");
     }
