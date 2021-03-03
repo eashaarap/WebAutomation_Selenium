@@ -33,11 +33,11 @@ public class HomePage {
     public void checkMotorsButton() {
         driver.findElement(By.linkText("Motors")).click();
     }
-//    public void checkMotorsButton() {
-//        driver.findElement(By.linkText("Motors")).click();
-//    }
-//    public void checkMotorsButton() {
-//        driver.findElement(By.linkText("Motors")).click();
+    public void checkFashionButton() {
+        driver.findElement(By.linkText("Fashion")).click();
+    }
+//    public void checkElectronicsButton() {
+//        driver.findElement(By.linkText("Electronics")).click();
 //    }
 //    public void checkMotorsButton() {
 //        driver.findElement(By.linkText("Motors")).click();
