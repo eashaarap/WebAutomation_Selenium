@@ -60,6 +60,10 @@ public class HomePage {
     public void checkDealsButton() {
         driver.findElement(By.linkText("Deals")).click();
     }
+    @Test
+    public void checkHelpandContactOption(){
+        driver.findElement(By.linkText("Help & Contact")).click();
+    }
 
     public void checkSearchBox(){
         driver.findElement(By.id(searchBoxLocator)).sendKeys(productName);

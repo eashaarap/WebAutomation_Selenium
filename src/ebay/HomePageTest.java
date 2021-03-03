@@ -92,7 +92,7 @@ public class HomePageTest extends HomePage{
     }
     @Test
     //Test Case 21
-    public void checkBusinessIndustrialButton(){
+    public void checkBusinessIndustrialButtonTest(){
         checkBusinessIndustrialButton();
         String expectedText="Business & Industrial products for sale | eBay";
         String actualText = driver.getTitle();
@@ -100,7 +100,7 @@ public class HomePageTest extends HomePage{
     }
     @Test
     //Test Case 22
-    public void checkMusicButton(){
+    public void checkMusicButtonTest(){
         checkMusicButton();
         String expectedText="Music products for sale | eBay";
         String actualText = driver.getTitle();
@@ -108,9 +108,17 @@ public class HomePageTest extends HomePage{
     }
     @Test
     //Test Case 23
-    public void checkDealsButton(){
+    public void checkDealsButtonTest(){
         checkDealsButton();
         String expectedText="Daily Deals on eBay | Best deals and Free Shipping";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+    }
+    @Test
+    //Test Case 24
+    public void checkHelpandContactButtonTest(){
+        checkHelpandContactOption();
+        String expectedText="eBay Customer Service";
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page does not match");
     }
