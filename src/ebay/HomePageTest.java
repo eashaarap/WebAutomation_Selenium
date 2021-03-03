@@ -122,6 +122,14 @@ public class HomePageTest extends HomePage{
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page does not match");
     }
+    @Test
+    //Test Case 25
+    public void checkBrandOutletButtonTest(){
+        checkBrandOutletOption();
+        String expectedText="Brand Outlet products for sale | eBay";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+    }
 
 
 

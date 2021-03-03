@@ -60,7 +60,10 @@ public class HomePage {
     public void checkDealsButton() {
         driver.findElement(By.linkText("Deals")).click();
     }
-    @Test
+    public void checkBrandOutletOption(){
+        driver.findElement(By.linkText("Brand Outlet")).click();
+    }
+
     public void checkHelpandContactOption(){
         driver.findElement(By.linkText("Help & Contact")).click();
     }
