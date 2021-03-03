@@ -50,6 +50,15 @@ public class HomePageTest extends HomePage{
         Assert.assertEquals(actualText, expectedText, "Page does not match");
 
     }
+    @Test
+    //Test Case 17
+    public void checkElectronicsButtonTest(){
+        checkElectronicsButton();
+        String expectedText="Electronics products for sale | eBay";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+
+    }
 
 
 
