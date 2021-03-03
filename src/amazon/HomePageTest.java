@@ -50,6 +50,14 @@ public class HomePageTest extends HomePage{
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page title does not match");
     }
+    @Test
+    //Test Case 28
+    public void checkCustomerServiceButtonTest(){
+        checkCustomerServiceButton();
+        String expectedText = "Amazon.com Help: Help & Customer Service";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page title does not match");
+    }
 
 
 

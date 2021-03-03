@@ -44,6 +44,9 @@ public class HomePage  {
     public void checkPrimeButton(){
         driver.findElement(By.linkText("Prime")).click();
     }
+    public void checkCustomerServiceButton(){
+        driver.findElement(By.linkText("Customer Service")).click();
+    }
 
 
     public void checkBooksButton(){
