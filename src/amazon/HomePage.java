@@ -47,6 +47,9 @@ public class HomePage  {
     public void checkCustomerServiceButton(){
         driver.findElement(By.linkText("Customer Service")).click();
     }
+    public void checkFashionButton(){
+        driver.findElement(By.linkText("Fashion")).click();
+    }
 
 
     public void checkBooksButton(){
