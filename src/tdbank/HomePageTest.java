@@ -36,4 +36,12 @@ public class HomePageTest extends HomePage  {
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page does not match");
     }
+    @Test
+    //Test Case 14
+    public void checkRetirementPlanningButtonTest() throws InterruptedException {
+        checkRetirementPlanningButton();
+        String expectedText = "Retirement Investment Planning & Account Management | TD Wealth";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+    }
 }

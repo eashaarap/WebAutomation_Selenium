@@ -34,5 +34,13 @@ public class HomePage {
         checkInvestingWealthOption();
         driver.findElement(By.xpath("//*[@id=\"drag-id-tabsCarousel0\"]/div/li[1]/div[1]/span/span")).click();
     }
+    @Test
+    public void checkRetirementPlanningButton() throws InterruptedException {
+        checkInvestingWealthOption();
+        Thread.sleep(2000);
+        checkIndividualFamiliesButton();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"main\"]/section[4]/div/div[2]/div[2]/div/h3/a")).click();
+    }
 
 }
