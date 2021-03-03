@@ -51,6 +51,9 @@ public class HomePage {
     public void checkToysButton() {
         driver.findElement(By.linkText("Toys")).click();
     }
+    public void checkBusinessIndustrialButton() {
+        driver.findElement(By.linkText("Business & Industrial")).click();
+    }
 
     public void checkSearchBox(){
         driver.findElement(By.id(searchBoxLocator)).sendKeys(productName);
