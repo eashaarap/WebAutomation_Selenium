@@ -98,6 +98,14 @@ public class HomePageTest extends HomePage{
         String actualText = driver.getTitle();
         Assert.assertEquals(actualText, expectedText, "Page does not match");
     }
+    @Test
+    //Test Case 22
+    public void checkMusicButton(){
+        checkMusicButton();
+        String expectedText="Music products for sale | eBay";
+        String actualText = driver.getTitle();
+        Assert.assertEquals(actualText, expectedText, "Page does not match");
+    }
 
 
 
