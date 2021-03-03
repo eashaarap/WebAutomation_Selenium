@@ -45,6 +45,9 @@ public class HomePage {
     public void checkHomeGardenButton() {
         driver.findElement(By.linkText("Home & Garden")).click();
     }
+    public void checkSportingGoodsButton() {
+        driver.findElement(By.linkText("Sporting Goods")).click();
+    }
 
     public void checkSearchBox(){
         driver.findElement(By.id(searchBoxLocator)).sendKeys(productName);
