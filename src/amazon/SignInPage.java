@@ -13,8 +13,8 @@ public class SignInPage extends HomePage{
     String singInButtonLocator = "nav-link-accountList";
     String emailIdLocator ="ap_email";
     String passwordIdLocator ="ap_password";
-    String userPassword = "Sage2010";
-    String emailLogin = "easha2272@gmail.com";
+    String userPassword = "Sae2010";
+    String emailLogin = "easha@test.com";
     String continueButton="a-button-input";
     String signInButton ="auth-signin-button";
 
